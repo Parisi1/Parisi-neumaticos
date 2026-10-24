@@ -3,10 +3,195 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Parisi Neumaticos</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>PARISI NEUMÁTICOS - Llantas, Neumáticos & Servicios de Alta Gama</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Fuentes de Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;800;900&family=Racing+Sans+One&family=Poppins:wght@300;400;600;700;900&display=swap" rel="stylesheet">
 </head>
 <body>
-    <h1>Bienvenido a Parisi Neumaticos</h1>
+
+    <!-- Fondo de malla animado -->
+    <div class="bg-grid"></div>
+
+    <!-- Navegación -->
+    <header class="navbar">
+        <div class="logo-container">
+            <div class="logo-emblem">P</div>
+            <div class="logo-text">
+                <span class="logo-main">PARISI</span>
+                <span class="logo-sub">NEUMÁTICOS</span>
+            </div>
+        </div>
+        <nav class="nav-links">
+            <a href="#inicio">Inicio</a>
+            <a href="#neumaticos">Neumáticos</a>
+            <a href="#llantas">Llantas</a>
+            <a href="#servicios">Servicios</a>
+        </nav>
+        <a href="https://wa.me/5491139540009?text=Hola,%20busco%20asesoramiento%20para%20mi%20vehículo" target="_blank" class="btn-nav">
+            Contactar
+        </a>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="inicio" class="hero">
+        <div class="hero-content">
+            <span class="badge">🔥 MÁXIMO RENDIMIENTO Y SEGURIDAD</span>
+            <h1>DOMINA CADA <span>KILÓMETRO</span></h1>
+            <p>Neumáticos nuevos de primeras marcas, llantas de aleación exclusivas y servicios especializados para llevar tu vehículo al siguiente nivel con el respaldo de Parisi.</p>
+            <div class="hero-btns">
+                <a href="#neumaticos" class="btn-primary">Ver Catálogo</a>
+                <a href="https://wa.me/5491139540009?text=Hola,%20quiero%20cotizar%20neumáticos%20o%20llantas" target="_blank" class="btn-whatsapp-hero">
+                    <span>💬</span> Cotizar por WhatsApp
+                </a>
+            </div>
+        </div>
+        <div class="hero-visual">
+            <div class="wheel-outer">
+                <div class="wheel-inner"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Banner de Marcas / Características -->
+    <section class="features-bar">
+        <div class="feature-item">
+            <span class="icon">⚡</span>
+            <div>
+                <h4>Garantía Oficial</h4>
+                <p>En todos los productos</p>
+            </div>
+        </div>
+        <div class="feature-item">
+            <span class="icon">🛠️</span>
+            <div>
+                <h4>Instalación Express</h4>
+                <p>Colocación en el día</p>
+            </div>
+        </div>
+        <div class="feature-item">
+            <span class="icon">💎</span>
+            <div>
+                <h4>Diseños Exclusivos</h4>
+                <p>Llantas de aleación premium</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Neumáticos -->
+    <section id="neumaticos" class="catalog">
+        <h2 class="section-title">NEUMÁTICOS <span>NUEVOS</span></h2>
+        <p class="section-subtitle">Tecnología de agarre superior para autos, SUVs y camionetas.</p>
+
+        <div class="grid">
+            <div class="card">
+                <div class="card-tag">Alta Gama</div>
+                <div class="card-img tyre-1"></div>
+                <h3>Sport Ultra Performance</h3>
+                <p>Diseñados para alta velocidad, máximo agarre en curvas y excelente evacuación de agua.</p>
+                <a href="https://wa.me/5491139540009?text=Consulta%20por%20Neumáticos%20Sport%20Ultra" target="_blank" class="card-btn">Consultar Medidas</a>
+            </div>
+
+            <div class="card">
+                <div class="card-tag">Más Vendido</div>
+                <div class="card-img tyre-2"></div>
+                <h3>All-Terrain Heavy Duty</h3>
+                <p>Resistencia extrema para camionetas y 4x4. Rendimiento superior en barro, arena y asfalto.</p>
+                <a href="https://wa.me/5491139540009?text=Consulta%20por%20Neumáticos%20All-Terrain" target="_blank" class="card-btn">Consultar Medidas</a>
+            </div>
+
+            <div class="card">
+                <div class="card-tag">Ecológico</div>
+                <div class="card-img tyre-3"></div>
+                <h3>Urban Comfort & Eco</h3>
+                <p>Rodado silencioso, menor consumo de combustible y durabilidad optimizada para la ciudad.</p>
+                <a href="https://wa.me/5491139540009?text=Consulta%20por%20Neumáticos%20Urban%20Eco" target="_blank" class="card-btn">Consultar Medidas</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Llantas -->
+    <section id="llantas" class="catalog gray-bg">
+        <h2 class="section-title">LLANTAS <span>DE ALEACIÓN</span></h2>
+        <p class="section-subtitle">Estilo deportivo, ligereza y resistencia extrema.</p>
+
+        <div class="grid">
+            <div class="card rim-card">
+                <div class="card-img rim-1"></div>
+                <h3>Dark Concave Rodado 17"-20"</h3>
+                <p>Acabado negro mate agresivo con perfil cóncavo de alto impacto visual.</p>
+                <a href="https://wa.me/5491139540009?text=Consulta%20por%20Llantas%20Dark%20Concave" target="_blank" class="card-btn">Pedir Asesoramiento</a>
+            </div>
+
+            <div class="card rim-card">
+                <div class="card-img rim-2"></div>
+                <h3>Hyper Silver Multi-Rayos</h3>
+                <p>Diseño elegante con acabado cromado brillante para vehículos de lujo.</p>
+                <a href="https://wa.me/5491139540009?text=Consulta%20por%20Llantas%20Hyper%20Silver" target="_blank" class="card-btn">Pedir Asesoramiento</a>
+            </div>
+
+            <div class="card rim-card">
+                <div class="card-img rim-3"></div>
+                <h3>Forged Racing Bronze</h3>
+                <p>Ultra livianas de forjado especial, ideales para optimizar la aceleración y frenado.</p>
+                <a href="https://wa.me/5491139540009?text=Consulta%20por%20Llantas%20Forged%20Bronze" target="_blank" class="card-btn">Pedir Asesoramiento</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Servicios -->
+    <section id="servicios" class="services">
+        <h2 class="section-title">SERVICIOS <span>ESPECIALIZADOS</span></h2>
+        <p class="section-subtitle">Mantenimiento de alta precisión con maquinaria de última generación.</p>
+
+        <div class="services-grid">
+            <div class="service-box">
+                <div class="service-icon">📐</div>
+                <h3>Alineación 3D Láser</h3>
+                <p>Alineación computarizada de alta precisión para evitar el desgaste irregular de tus neumáticos.</p>
+            </div>
+            <div class="service-box">
+                <div class="service-icon">⚖️</div>
+                <h3>Balanceo Dinámico</h3>
+                <p>Elimina vibraciones en el volante a altas velocidades y garantiza un andar suave.</p>
+            </div>
+            <div class="service-box">
+                <div class="service-icon">🔧</div>
+                <h3>Reparación de Llantas</h3>
+                <p>Centrado, soldadura TIG y diamantado para dejar tus llantas como salidas de fábrica.</p>
+            </div>
+            <div class="service-box">
+                <div class="service-icon">🛑</div>
+                <h3>Frenos y Suspensión</h3>
+                <p>Inspección y cambio de pastillas, discos y amortiguadores para una seguridad total.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Banner de Llamado a la Acción (CTA) -->
+    <section class="cta-section">
+        <div class="cta-container">
+            <h2>¿No sabés qué medida necesita tu auto?</h2>
+            <p>Escribinos ahora por WhatsApp con el modelo y año de tu vehículo y te asesoramos de inmediato sin compromiso.</p>
+            <a href="https://wa.me/5491139540009?text=Hola,%20necesito%20saber%20qué%20medida%20lleva%20mi%20auto" target="_blank" class="btn-cta">
+                Hablar con un Especialista
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 PARISI NEUMÁTICOS. Todos los derechos reservados. Llantas & Neumáticos.</p>
+    </footer>
+
+    <!-- Botón Flotante de WhatsApp -->
+    <a href="https://wa.me/5491139540009?text=Hola,%20quisiera%20hacer%20una%20consulta" class="whatsapp-float" target="_blank" title="Contactar por WhatsApp">
+        <svg viewBox="0 0 32 32" class="whatsapp-icon">
+            <path d="M16 0c-8.837 0-16 7.163-16 16 0 2.825 0.737 5.607 2.137 8.048l-2.137 7.952 8.138-2.132c2.378 1.332 5.080 2.132 7.862 2.132 8.837 0 16-7.163 16-16s-7.163-16-16-16zM16 29.333c-2.478 0-4.908-0.662-7.042-1.917l-0.505-0.298-5.238 1.372 1.397-5.105-0.328-0.522c-1.375-2.188-2.102-4.717-2.102-7.297 0-7.352 5.982-13.333 13.333-13.333s13.333 5.982 13.333 13.333-5.982 13.333-13.333 13.333zM22.288 18.983c-0.345-0.173-2.042-1.008-2.358-1.123s-0.547-0.173-0.777 0.173c-0.23 0.345-0.893 1.123-1.095 1.353s-0.403 0.258-0.748 0.087c-0.345-0.173-1.457-0.537-2.775-1.712-1.025-0.915-1.717-2.045-1.918-2.39-0.202-0.345-0.022-0.532 0.152-0.705 0.157-0.155 0.345-0.403 0.518-0.605s0.23-0.345 0.345-0.575c0.115-0.23 0.058-0.432-0.028-0.605s-0.777-1.872-1.063-2.562c-0.28-0.672-0.563-0.58-0.777-0.592l-0.662-0.012c-0.23 0-0.605 0.087-0.92 0.432s-1.208 1.18-1.208 2.877c0 1.697 1.237 3.335 1.41 3.565s2.433 3.715 5.895 5.21c0.823 0.355 1.465 0.568 1.965 0.727 0.827 0.263 1.58 0.225 2.175 0.137 0.663-0.098 2.042-0.835 2.33-1.64 0.288-0.805 0.288-1.495 0.202-1.64-0.087-0.145-0.317-0.23-0.662-0.403z"></path>
+        </svg>
+    </a>
+
 </body>
 </html>
