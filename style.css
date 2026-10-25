@@ -462,7 +462,7 @@ body {
 }
 
 /* =========================================================
-   SLIDER Y MEJORAS DE FOTOS (SIN JAVASCRIPT)
+   SLIDER DE FOTOS (3 Y 5 IMÁGENES EN HOVER - SIN JS)
    ========================================================= */
 .image-slider {
     position: relative;
@@ -484,50 +484,75 @@ body {
     height: 100%;
     object-fit: contain;
     padding: 0.6rem;
-    transition: all 0.5s ease;
+    transition: opacity 0.4s ease;
     filter: drop-shadow(0 5px 8px rgba(0,0,0,0.6));
+    opacity: 0;
 }
 
-/* Estado normal: La primera foto es visible */
-.slide-1 { opacity: 1; z-index: 3; }
-.slide-2 { opacity: 0; z-index: 2; }
-.slide-3 { opacity: 0; z-index: 1; }
-
-/* Animación al pasar el cursor (Hover) */
-.image-slider:hover .slide-1 {
-    animation: cycleImage1 4.5s infinite;
-}
-
-.image-slider:hover .slide-2 {
-    animation: cycleImage2 4.5s infinite;
-}
-
-.image-slider:hover .slide-3 {
-    animation: cycleImage3 4.5s infinite;
-}
+/* Estado inicial: Mostrar la primera foto */
+.slide-1, .s-1 { opacity: 1; z-index: 5; }
+.slide-2, .s-2 { z-index: 4; }
+.slide-3, .s-3 { z-index: 3; }
+.s-4 { z-index: 2; }
+.s-5 { z-index: 1; }
 
 .card:hover .image-slider {
     border-color: var(--accent);
     box-shadow: 0 0 20px var(--accent-glow);
 }
 
-/* Secuencia temporal de transición de fotos */
-@keyframes cycleImage1 {
-    0%, 30% { opacity: 1; transform: scale(1.02); }
-    33%, 97% { opacity: 0; transform: scale(1); }
-    100% { opacity: 1; transform: scale(1.02); }
+/* --- ANIMACIÓN PARA 3 FOTOS (HANKOOK) --- */
+.slider-3:hover .slide-1 { animation: c3-1 4.5s infinite; }
+.slider-3:hover .slide-2 { animation: c3-2 4.5s infinite; }
+.slider-3:hover .slide-3 { animation: c3-3 4.5s infinite; }
+
+@keyframes c3-1 {
+    0%, 30% { opacity: 1; }
+    33%, 97% { opacity: 0; }
+    100% { opacity: 1; }
+}
+@keyframes c3-2 {
+    0%, 30% { opacity: 0; }
+    33%, 63% { opacity: 1; }
+    66%, 100% { opacity: 0; }
+}
+@keyframes c3-3 {
+    0%, 63% { opacity: 0; }
+    66%, 96% { opacity: 1; }
+    100% { opacity: 0; }
 }
 
-@keyframes cycleImage2 {
-    0%, 30% { opacity: 0; transform: scale(1); }
-    33%, 63% { opacity: 1; transform: scale(1.02); }
-    66%, 100% { opacity: 0; transform: scale(1); }
-}
+/* --- ANIMACIÓN PARA 5 FOTOS (SENTURY) --- */
+.slider-5:hover .s-1 { animation: c5-1 7.5s infinite; }
+.slider-5:hover .s-2 { animation: c5-2 7.5s infinite; }
+.slider-5:hover .s-3 { animation: c5-3 7.5s infinite; }
+.slider-5:hover .s-4 { animation: c5-4 7.5s infinite; }
+.slider-5:hover .s-5 { animation: c5-5 7.5s infinite; }
 
-@keyframes cycleImage3 {
-    0%, 63% { opacity: 0; transform: scale(1); }
-    66%, 96% { opacity: 1; transform: scale(1.02); }
-    100% { opacity: 0; transform: scale(1); }
+@keyframes c5-1 {
+    0%, 18% { opacity: 1; }
+    20%, 98% { opacity: 0; }
+    100% { opacity: 1; }
+}
+@keyframes c5-2 {
+    0%, 18% { opacity: 0; }
+    20%, 38% { opacity: 1; }
+    40%, 100% { opacity: 0; }
+}
+@keyframes c5-3 {
+    0%, 38% { opacity: 0; }
+    40%, 58% { opacity: 1; }
+    60%, 100% { opacity: 0; }
+}
+@keyframes c5-4 {
+    0%, 58% { opacity: 0; }
+    60%, 78% { opacity: 1; }
+    80%, 100% { opacity: 0; }
+}
+@keyframes c5-5 {
+    0%, 78% { opacity: 0; }
+    80%, 98% { opacity: 1; }
+    100% { opacity: 0; }
 }
 
 /* =========================================================
