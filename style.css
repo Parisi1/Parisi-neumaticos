@@ -1,5 +1,5 @@
 /* =========================================================
-   VARIABLES GLOBALES & RESET (MÁS BRILLO Y CONTRASTE)
+   VARIABLES GLOBALES & RESET
    ========================================================= */
 :root {
     --bg-color: #080a0f;
@@ -69,7 +69,6 @@ body {
     gap: 0.8rem;
 }
 
-/* Emblema circular estilo neumático "P" de la foto */
 .logo-emblem {
     width: 42px;
     height: 42px;
@@ -353,7 +352,7 @@ body {
 }
 
 /* =========================================================
-   SECCIONES Y TARJETAS (CATÁLOGOS)
+   SECCIONES Y TARJETAS
    ========================================================= */
 .catalog {
     padding: 5rem 8%;
@@ -419,32 +418,21 @@ body {
     border-radius: 6px;
     text-transform: uppercase;
     box-shadow: 0 0 10px var(--primary-glow);
-}
-
-.tyre-1, .tyre-2, .tyre-3 {
-    background: radial-gradient(circle, #2a2f3d 30%, #080a0f 80%);
-    border: 14px dashed #3a4256;
-    border-radius: 50%;
-    width: 150px !important;
-    height: 150px !important;
-    margin: 0 auto 1.8rem auto;
-    box-shadow: inset 0 0 20px #000, 0 0 15px rgba(255, 69, 0, 0.2);
-}
-
-.rim-1, .rim-2, .rim-3 {
-    background: radial-gradient(circle, #555 10%, #111 70%);
-    border: 6px double var(--accent);
-    border-radius: 50%;
-    width: 150px !important;
-    height: 150px !important;
-    margin: 0 auto 1.8rem auto;
-    box-shadow: 0 0 25px var(--accent-glow);
+    z-index: 10;
 }
 
 .card h3 {
     font-family: var(--font-heading);
-    font-size: 1.25rem;
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.card-price {
+    color: var(--primary);
+    font-size: 1.4rem;
+    font-weight: 900;
     margin-bottom: 0.8rem;
+    text-shadow: 0 0 10px rgba(255, 69, 0, 0.3);
 }
 
 .card p {
@@ -471,6 +459,75 @@ body {
     background: var(--primary);
     border-color: var(--primary);
     box-shadow: 0 0 20px var(--primary-glow);
+}
+
+/* =========================================================
+   SLIDER Y MEJORAS DE FOTOS (SIN JAVASCRIPT)
+   ========================================================= */
+.image-slider {
+    position: relative;
+    width: 100%;
+    height: 190px;
+    margin: 1rem 0 1.2rem 0;
+    overflow: hidden;
+    border-radius: 12px;
+    background: radial-gradient(circle, #1a202c 0%, #0d111a 100%);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    box-shadow: inset 0 0 15px rgba(0,0,0,0.8);
+}
+
+.img-slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    padding: 0.6rem;
+    transition: all 0.5s ease;
+    filter: drop-shadow(0 5px 8px rgba(0,0,0,0.6));
+}
+
+/* Estado normal: La primera foto es visible */
+.slide-1 { opacity: 1; z-index: 3; }
+.slide-2 { opacity: 0; z-index: 2; }
+.slide-3 { opacity: 0; z-index: 1; }
+
+/* Animación al pasar el cursor (Hover) */
+.image-slider:hover .slide-1 {
+    animation: cycleImage1 4.5s infinite;
+}
+
+.image-slider:hover .slide-2 {
+    animation: cycleImage2 4.5s infinite;
+}
+
+.image-slider:hover .slide-3 {
+    animation: cycleImage3 4.5s infinite;
+}
+
+.card:hover .image-slider {
+    border-color: var(--accent);
+    box-shadow: 0 0 20px var(--accent-glow);
+}
+
+/* Secuencia temporal de transición de fotos */
+@keyframes cycleImage1 {
+    0%, 30% { opacity: 1; transform: scale(1.02); }
+    33%, 97% { opacity: 0; transform: scale(1); }
+    100% { opacity: 1; transform: scale(1.02); }
+}
+
+@keyframes cycleImage2 {
+    0%, 30% { opacity: 0; transform: scale(1); }
+    33%, 63% { opacity: 1; transform: scale(1.02); }
+    66%, 100% { opacity: 0; transform: scale(1); }
+}
+
+@keyframes cycleImage3 {
+    0%, 63% { opacity: 0; transform: scale(1); }
+    66%, 96% { opacity: 1; transform: scale(1.02); }
+    100% { opacity: 0; transform: scale(1); }
 }
 
 /* =========================================================
