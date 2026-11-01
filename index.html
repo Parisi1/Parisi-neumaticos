@@ -18,7 +18,6 @@
     <!-- Navegación -->
     <header class="navbar">
         <div class="logo-container">
-            <!-- Logo personalizado grande -->
             <img src="img/logo.png" onerror="this.src='img/logo.jpg'" alt="Logo Parisi Neumáticos" class="custom-logo-img">
             <div class="logo-text">
                 <span class="logo-main">PARISI</span>
@@ -27,7 +26,7 @@
         </div>
         <nav class="nav-links">
             <a href="#inicio">Inicio</a>
-            <a href="#neumaticos">Neumáticos</a>
+            <a href="#neumaticos">Catálogo</a>
             <a href="#llantas">Llantas</a>
             <a href="#servicios">Servicios</a>
         </nav>
@@ -42,9 +41,9 @@
         <div class="hero-content">
             <span class="badge">🔥 MÁXIMO RENDIMIENTO Y SEGURIDAD</span>
             <h1>DOMINA CADA <span>KILÓMETRO</span></h1>
-            <p>Neumáticos nuevos de primeras marcas, llantas y servicios especializados para llevar tu vehículo al siguiente nivel con el respaldo de Parisi.</p>
+            <p>Neumáticos nuevos de todas las medidas, llantas y servicios especializados para llevar tu vehículo al siguiente nivel con el respaldo de Parisi.</p>
             <div class="hero-btns">
-                <a href="#neumaticos" class="btn-primary">Ver Catálogo</a>
+                <a href="#neumaticos" class="btn-primary">Ver Catálogo Completo</a>
                 <a href="https://wa.me/5491139540009?text=Hola,%20quiero%20cotizar%20neumáticos%20o%20llantas" target="_blank" class="btn-whatsapp-hero">
                     <span>💬</span> Cotizar por WhatsApp
                 </a>
@@ -52,7 +51,7 @@
         </div>
     </section>
 
-    <!-- Banner de Marcas / Características -->
+    <!-- Banner de Características -->
     <section class="features-bar">
         <div class="feature-item">
             <span class="icon">⚡</span>
@@ -77,93 +76,238 @@
         </div>
     </section>
 
-    <!-- Sección Neumáticos -->
+    <!-- SECCIÓN DE CATÁLOGO CON PESTAÑAS Y VISTA LIMITADA -->
     <section id="neumaticos" class="catalog">
-        <h2 class="section-title">NEUMÁTICOS <span>NUEVOS</span></h2>
-        <p class="section-subtitle">Medida destacada: 205/55R16 - Pasá el cursor por la foto para ver las distintas vistas.</p>
+        <h2 class="section-title">CATÁLOGO DE <span>NEUMÁTICOS</span></h2>
+        <p class="section-subtitle">Medidas seleccionadas. Elegí tu rodado o usa las pestañas para explorar todo el stock.</p>
 
-        <div class="grid">
-            <!-- Hankook (3 fotos) -->
-            <div class="card">
+        <!-- Barra de Búsqueda Estática (Sin JavaScript) -->
+        <div class="search-container">
+            <div class="search-box">
+                <span class="search-icon">🔍</span>
+                <input type="text" placeholder="Selecciona una pestaña abajo para filtrar el stock..." class="search-input" readonly>
+            </div>
+        </div>
+
+        <!-- Radios ocultos para controlar las pestañas por CSS -->
+        <input type="radio" name="catalog-tab" id="tab-todos" checked class="tab-radio">
+        <input type="radio" name="catalog-tab" id="tab-r13" class="tab-radio">
+        <input type="radio" name="catalog-tab" id="tab-r14" class="tab-radio">
+        <input type="radio" name="catalog-tab" id="tab-r15" class="tab-radio">
+        <input type="radio" name="catalog-tab" id="tab-r16" class="tab-radio">
+        <input type="radio" name="catalog-tab" id="tab-r17" class="tab-radio">
+
+        <!-- Botones / Pestañas de Navegación -->
+        <div class="catalog-tabs">
+            <label for="tab-todos" class="tab-btn">🌟 Destacados (6)</label>
+            <label for="tab-r13" class="tab-btn">Rodado 13</label>
+            <label for="tab-r14" class="tab-btn">Rodado 14</label>
+            <label for="tab-r15" class="tab-btn">Rodado 15</label>
+            <label for="tab-r16" class="tab-btn">Rodado 16</label>
+            <label for="tab-r17" class="tab-btn">Rodado 17</label>
+        </div>
+
+        <!-- CONTENEDOR DE TARJETAS -->
+        <div class="grid catalog-grid">
+
+            <!-- ================= DESTACADOS (Visible al iniciar) ================= -->
+
+            <!-- 1. 175/65R14 -->
+            <div class="card" data-category="r14" data-featured="true">
+                <div class="card-tag">Destacado</div>
+                <div class="image-slider slider-2">
+                    <img src="img/pirelli-1.png" onerror="this.src='img/pirelli-1.jpg'" class="img-slide slide-1">
+                    <img src="img/pirelli-2.png" onerror="this.src='img/pirelli-2.jpg'" class="img-slide slide-2">
+                </div>
+                <h3>Neumático 175/65R14</h3>
+                <p class="card-price">$130.000</p>
+                <p>Seguridad optimizada, menor ruido y excelente durabilidad para gama media.</p>
+                <a href="https://wa.me/5491139540009?text=Hola,%20me%20interesa%20175/65R14" target="_blank" class="card-btn">Consultar por WhatsApp</a>
+            </div>
+
+            <!-- 2. 185/65R14 -->
+            <div class="card" data-category="r14" data-featured="true">
+                <div class="card-tag">Destacado</div>
+                <div class="image-slider slider-2">
+                    <img src="img/185-65r15-continental-1.png" onerror="this.src='img/185-65r15-continental-1.jpg'" class="img-slide slide-1">
+                    <img src="img/185-65r15-continental-2.png" onerror="this.src='img/185-65r15-continental-2.jpg'" class="img-slide slide-2">
+                </div>
+                <h3>Neumático 185/65R14</h3>
+                <p class="card-price">$142.000</p>
+                <p>Confort touring para viajes largos y absorción óptima de irregularidades.</p>
+                <a href="https://wa.me/5491139540009?text=Hola,%20me%20interesa%20185/65R14" target="_blank" class="card-btn">Consultar por WhatsApp</a>
+            </div>
+
+            <!-- 3. 195/65R15 -->
+            <div class="card" data-category="r15" data-featured="true">
+                <div class="card-tag">Más Vendido</div>
+                <div class="image-slider slider-3">
+                    <img src="img/pirelli-1.png" onerror="this.src='img/pirelli-1.jpg'" class="img-slide slide-1">
+                    <img src="img/pirelli-2.png" onerror="this.src='img/pirelli-2.jpg'" class="img-slide slide-2">
+                    <img src="img/fate-1.png" onerror="this.src='img/fate-1.jpg'" class="img-slide slide-3">
+                </div>
+                <h3>Neumático 195/65R15</h3>
+                <p class="card-price">$198.000</p>
+                <p>Una de las medidas más solicitadas. Seguridad, confort y gran kilometraje.</p>
+                <a href="https://wa.me/5491139540009?text=Hola,%20me%20interesa%20195/65R15" target="_blank" class="card-btn">Consultar por WhatsApp</a>
+            </div>
+
+            <!-- 4. 205/55R16 -->
+            <div class="card" data-category="r16" data-featured="true">
                 <div class="card-tag">Hankook</div>
                 <div class="image-slider slider-3">
-                    <img src="img/hankook-1.png" onerror="this.src='img/hankook-1.jpg'" alt="Hankook Vista 1" class="img-slide slide-1">
-                    <img src="img/hankook-2.png" onerror="this.src='img/hankook-2.jpg'" alt="Hankook Vista 2" class="img-slide slide-2">
-                    <img src="img/hankook-3.png" onerror="this.src='img/hankook-3.jpg'" alt="Hankook Vista 3" class="img-slide slide-3">
+                    <img src="img/hankook-1.png" onerror="this.src='img/hankook-1.jpg'" class="img-slide slide-1">
+                    <img src="img/hankook-2.png" onerror="this.src='img/hankook-2.jpg'" class="img-slide slide-2">
+                    <img src="img/hankook-3.png" onerror="this.src='img/hankook-3.jpg'" class="img-slide slide-3">
                 </div>
-                <h3>Neumático Hankook 205/55R16 Ventus Concept V2 H457 - 94V</h3>
+                <h3>Neumático 205/55R16 Hankook</h3>
                 <p class="card-price">$180.000</p>
-                <p>Alto rendimiento y diseño avanzado para una tracción superior en seco y mojado.</p>
-                <a href="https://wa.me/5491139540009?text=Hola,%20me%20interesa%20el%20Neumático%20Hankook%20205/55R16%20Ventus%20Concept%20V2%20($180.000)" target="_blank" class="card-btn">Consultar por WhatsApp</a>
+                <p>Alto rendimiento y diseño avanzado para tracción superior en seco y mojado.</p>
+                <a href="https://wa.me/5491139540009?text=Hola,%20me%20interesa%20205/55R16" target="_blank" class="card-btn">Consultar por WhatsApp</a>
             </div>
 
-            <!-- Sentury (5 fotos) -->
-            <div class="card">
-                <div class="card-tag">Sentury</div>
-                <div class="image-slider slider-5">
-                    <img src="img/sentury-1.png" onerror="this.src='img/sentury-1.jpg'" alt="Sentury Vista 1" class="img-slide s-1">
-                    <img src="img/sentury-2.png" onerror="this.src='img/sentury-2.jpg'" alt="Sentury Vista 2" class="img-slide s-2">
-                    <img src="img/sentury-3.png" onerror="this.src='img/sentury-3.jpg'" alt="Sentury Vista 3" class="img-slide s-3">
-                    <img src="img/sentury-4.png" onerror="this.src='img/sentury-4.jpg'" alt="Sentury Vista 4" class="img-slide s-4">
-                    <img src="img/sentury-5.png" onerror="this.src='img/sentury-5.jpg'" alt="Sentury Vista 5" class="img-slide s-5">
-                </div>
-                <h3>Neumático Sentury 205/55R16 Qirin 990 - 94W</h3>
-                <p class="card-price">$140.000</p>
-                <p>Confort de marcha excepcional, durabilidad optimizada y eficiencia superior.</p>
-                <a href="https://wa.me/5491139540009?text=Hola,%20me%20interesa%20el%20Neumático%20Sentury%20205/55R16%20Qirin%20990%20($140.000)" target="_blank" class="card-btn">Consultar por WhatsApp</a>
-            </div>
-
-            <!-- Fate (2 fotos) -->
-            <div class="card">
-                <div class="card-tag">Fate</div>
+            <!-- 5. 225/45R17 -->
+            <div class="card" data-category="r17" data-featured="true">
+                <div class="card-tag">Destacado</div>
                 <div class="image-slider slider-2">
-                    <img src="img/fate-1.png" onerror="this.src='img/fate-1.jpg'" alt="Fate Vista 1" class="img-slide slide-1">
-                    <img src="img/fate-2.png" onerror="this.src='img/fate-2.jpg'" alt="Fate Vista 2" class="img-slide slide-2">
+                    <img src="img/pirelli-1.png" onerror="this.src='img/pirelli-1.jpg'" class="img-slide slide-1">
+                    <img src="img/pirelli-2.png" onerror="this.src='img/pirelli-2.jpg'" class="img-slide slide-2">
                 </div>
-                <h3>Neumático Fate 205/55R16 Sentiva AR-360</h3>
-                <p class="card-price">$220.000</p>
-                <p>Tecnología nacional de vanguardia, excelente frenado y gran vida útil.</p>
-                <a href="https://wa.me/5491139540009?text=Hola,%20me%20interesa%20el%20Neumático%20Fate%20205/55R16%20Sentiva%20AR-360%20($220.000)" target="_blank" class="card-btn">Consultar por WhatsApp</a>
+                <h3>Neumático 225/45R17 Sport</h3>
+                <p class="card-price">$285.000</p>
+                <p>Alto rendimiento deportivo para vehículos exigentes y de alta velocidad.</p>
+                <a href="https://wa.me/5491139540009?text=Hola,%20me%20interesa%20225/45R17" target="_blank" class="card-btn">Consultar por WhatsApp</a>
             </div>
 
-            <!-- Pirelli (2 fotos) -->
-            <div class="card">
-                <div class="card-tag">Pirelli</div>
+            <!-- 6. 265/65R17 -->
+            <div class="card" data-category="r17" data-featured="true">
+                <div class="card-tag">SUV / 4x4</div>
                 <div class="image-slider slider-2">
-                    <img src="img/pirelli-1.png" onerror="this.src='img/pirelli-1.jpg'" alt="Pirelli Vista 1" class="img-slide slide-1">
-                    <img src="img/pirelli-2.png" onerror="this.src='img/pirelli-2.jpg'" alt="Pirelli Vista 2" class="img-slide slide-2">
+                    <img src="img/pirelli-1.png" onerror="this.src='img/pirelli-1.jpg'" class="img-slide slide-1">
+                    <img src="img/pirelli-2.png" onerror="this.src='img/pirelli-2.jpg'" class="img-slide slide-2">
                 </div>
-                <h3>Neumático Pirelli 205/55R16 P7 Cinturato</h3>
-                <p class="card-price">$320.000</p>
-                <p>El equilibrio perfecto entre baja resistencia al rodamiento y seguridad en frenado.</p>
-                <a href="https://wa.me/5491139540009?text=Hola,%20me%20interesa%20el%20Neumático%20Pirelli%20205/55R16%20P7%20Cinturato%20($320.000)" target="_blank" class="card-btn">Consultar por WhatsApp</a>
+                <h3>Neumático 265/65R17 Pick-Up</h3>
+                <p class="card-price">$410.000</p>
+                <p>Especial para camionetas pesadas. Máxima durabilidad en ruta y ripio.</p>
+                <a href="https://wa.me/5491139540009?text=Hola,%20me%20interesa%20265/65R17" target="_blank" class="card-btn">Consultar por WhatsApp</a>
             </div>
 
-            <!-- Xbri (2 fotos) -->
-            <div class="card">
-                <div class="card-tag">Xbri</div>
+
+            <!-- ================= RESTO DE LAS MEDIDAS POR RODADO ================= -->
+
+            <!-- Rodado 13 -->
+            <div class="card" data-category="r13">
+                <div class="card-tag">Rodado 13</div>
                 <div class="image-slider slider-2">
-                    <img src="img/xbri-1.png" onerror="this.src='img/xbri-1.jpg'" alt="Xbri Vista 1" class="img-slide slide-1">
-                    <img src="img/xbri-2.png" onerror="this.src='img/xbri-2.jpg'" alt="Xbri Vista 2" class="img-slide slide-2">
+                    <img src="img/165-70r13-durable-1.png" onerror="this.src='img/165-70r13-durable-1.jpg'" class="img-slide slide-1">
+                    <img src="img/fate-1.png" onerror="this.src='img/fate-1.jpg'" class="img-slide slide-2">
                 </div>
-                <h3>Neumático Xbri 205/55R16 Fastaway</h3>
-                <p class="card-price">$150.000</p>
-                <p>Excelente relación precio-calidad, seguridad y estabilidad en ruta urbana y autopista.</p>
-                <a href="https://wa.me/5491139540009?text=Hola,%20me%20interesa%20el%20Neumático%20Xbri%20205/55R16%20Fastaway%20($150.000)" target="_blank" class="card-btn">Consultar por WhatsApp</a>
+                <h3>Neumático 155/70R13</h3>
+                <p class="card-price">$95.000</p>
+                <p>Ideal para vehículos urbanos livianos, excelente rendimiento y agarre seguro.</p>
+                <a href="https://wa.me/5491139540009?text=Hola,%20me%20interesa%20155/70R13" target="_blank" class="card-btn">Consultar por WhatsApp</a>
             </div>
 
-            <!-- Continental (2 fotos) -->
-            <div class="card">
-                <div class="card-tag">Continental</div>
+            <div class="card" data-category="r13">
+                <div class="card-tag">Rodado 13</div>
                 <div class="image-slider slider-2">
-                    <img src="img/continental-1.png" onerror="this.src='img/continental-1.jpg'" alt="Continental Vista 1" class="img-slide slide-1">
-                    <img src="img/continental-2.png" onerror="this.src='img/continental-2.jpg'" alt="Continental Vista 2" class="img-slide slide-2">
+                    <img src="img/175-70r13-xbri-1.png" onerror="this.src='img/175-70r13-xbri-1.jpg'" class="img-slide slide-1">
+                    <img src="img/175-70r13-xbri-1.png" onerror="this.src='img/175-70r13-xbri-1.jpg'" class="img-slide slide-2">
                 </div>
-                <h3>Neumático Continental 205/55R16 PowerContact 2</h3>
-                <p class="card-price">$280.000</p>
-                <p>Máximo confort acústico, gran kilometraje y frenado ultra seguro en piso mojado.</p>
-                <a href="https://wa.me/5491139540009?text=Hola,%20me%20interesa%20el%20Neumático%20Continental%20205/55R16%20PowerContact%202%20($280.000)" target="_blank" class="card-btn">Consultar por WhatsApp</a>
+                <h3>Neumático 175/70R13</h3>
+                <p class="card-price">$118.000</p>
+                <p>Mayor pisada para un andar firme, seguro y con excelente respuesta en piso húmedo.</p>
+                <a href="https://wa.me/5491139540009?text=Hola,%20me%20interesa%20175/70R13" target="_blank" class="card-btn">Consultar por WhatsApp</a>
             </div>
+
+            <!-- Rodado 14 -->
+            <div class="card" data-category="r14">
+                <div class="card-tag">Rodado 14</div>
+                <div class="image-slider slider-2">
+                    <img src="img/185-60r14-xbri-1.png" onerror="this.src='img/185-60r14-xbri-1.jpg'" class="img-slide slide-1">
+                    <img src="img/sentury-1.png" onerror="this.src='img/sentury-1.jpg'" class="img-slide slide-2">
+                </div>
+                <h3>Neumático 185/60R14</h3>
+                <p class="card-price">$138.000</p>
+                <p>Perfil bajo deportivo que mejora notablemente la estabilidad en ruta.</p>
+                <a href="https://wa.me/5491139540009?text=Hola,%20me%20interesa%20185/60R14" target="_blank" class="card-btn">Consultar por WhatsApp</a>
+            </div>
+
+            <div class="card" data-category="r14">
+                <div class="card-tag">Rodado 14</div>
+                <div class="image-slider slider-2">
+                    <img src="img/fate-1.png" onerror="this.src='img/fate-1.jpg'" class="img-slide slide-1">
+                    <img src="img/fate-2.png" onerror="this.src='img/fate-2.jpg'" class="img-slide slide-2">
+                </div>
+                <h3>Neumático 185/70R14</h3>
+                <p class="card-price">$149.000</p>
+                <p>Estructura reforzada para soportar exigencias de carga y uso diario intenso.</p>
+                <a href="https://wa.me/5491139540009?text=Hola,%20me%20interesa%20185/70R14" target="_blank" class="card-btn">Consultar por WhatsApp</a>
+            </div>
+
+            <!-- Rodado 15 -->
+            <div class="card" data-category="r15">
+                <div class="card-tag">Rodado 15</div>
+                <div class="image-slider slider-2">
+                    <img src="img/185-65r15-xbri-1.png" onerror="this.src='img/185-65r15-xbri-1.jpg'" class="img-slide slide-1">
+                    <img src="img/195-65r15-ecology-1.png" onerror="this.src='img/195-65r15-ecology-1.jpg'" class="img-slide slide-2">
+                </div>
+                <h3>Neumático 185/65R15</h3>
+                <p class="card-price">$172.000</p>
+                <p>Baja resistencia al rodamiento que optimiza el consumo de combustible.</p>
+                <a href="https://wa.me/5491139540009?text=Hola,%20me%20interesa%20185/65R15" target="_blank" class="card-btn">Consultar por WhatsApp</a>
+            </div>
+
+            <div class="card" data-category="r15">
+                <div class="card-tag">Rodado 15</div>
+                <div class="image-slider slider-2">
+                    <img src="img/hankook-1.png" onerror="this.src='img/hankook-1.jpg'" class="img-slide slide-1">
+                    <img src="img/hankook-2.png" onerror="this.src='img/hankook-2.jpg'" class="img-slide slide-2">
+                </div>
+                <h3>Neumático 195/50R15</h3>
+                <p class="card-price">$178.000</p>
+                <p>Diseño deportivo de perfil bajo para máxima adherencia en curvas.</p>
+                <a href="https://wa.me/5491139540009?text=Hola,%20me%20interesa%20195/50R15" target="_blank" class="card-btn">Consultar por WhatsApp</a>
+            </div>
+
+            <!-- Rodado 16 -->
+            <div class="card" data-category="r16">
+                <div class="card-tag">Rodado 16</div>
+                <div class="image-slider slider-2">
+                    <img src="img/205-55r16-xbri-1.png" onerror="this.src='img/205-55r16-xbri-1.jpg'" class="img-slide slide-1">
+                    <img src="img/205-60r16-forza-1.png" onerror="this.src='img/205-60r16-forza-1.jpg'" class="img-slide slide-2">
+                </div>
+                <h3>Neumático 205/60R16</h3>
+                <p class="card-price">$235.000</p>
+                <p>Seguridad y estabilidad superior para SUVs medianos y sedanes ejecutivos.</p>
+                <a href="https://wa.me/5491139540009?text=Hola,%20me%20interesa%20205/60R16" target="_blank" class="card-btn">Consultar por WhatsApp</a>
+            </div>
+
+            <div class="card" data-category="r16">
+                <div class="card-tag">Rodado 16</div>
+                <div class="image-slider slider-2">
+                    <img src="img/215-65r16-brutus-1.png" onerror="this.src='img/215-65r16-brutus-1.jpg'" class="img-slide slide-1">
+                    <img src="img/215-65r16-ecology-1.png" onerror="this.src='img/215-65r16-ecology-1.jpg'" class="img-slide slide-2">
+                </div>
+                <h3>Neumático 215/65R16</h3>
+                <p class="card-price">$270.000</p>
+                <p>Especialmente diseñado para camionetas urbanas y crossovers.</p>
+                <a href="https://wa.me/5491139540009?text=Hola,%20me%20interesa%20215/65R16" target="_blank" class="card-btn">Consultar por WhatsApp</a>
+            </div>
+
+            <!-- Rodado 17 -->
+            <div class="card" data-category="r17">
+                <div class="card-tag">Rodado 17</div>
+                <div class="image-slider slider-2">
+                    <img src="img/225-65r17-brutus-1.png" onerror="this.src='img/225-65r17-brutus-1.jpg'" class="img-slide slide-1">
+                    <img src="img/245-65r17-forza-1.png" onerror="this.src='img/245-65r17-forza-1.jpg'" class="img-slide slide-2">
+                </div>
+                <h3>Neumático 225/65R17 SUV</h3>
+                <p class="card-price">$350.000</p>
+                <p>Tracción superior y confort para camionetas medianas y SUVs.</p>
+                <a href="https://wa.me/5491139540009?text=Hola,%20me%20interesa%20225/65R17" target="_blank" class="card-btn">Consultar por WhatsApp</a>
+            </div>
+
         </div>
     </section>
 
@@ -173,66 +317,61 @@
         <p class="section-subtitle">Modelos reforzados para auto y camioneta en distintas medidas.</p>
 
         <div class="grid">
-            <!-- Auto R13 (1 foto) -->
             <div class="card rim-card">
                 <div class="card-tag">Auto</div>
                 <div class="image-slider">
-                    <img src="img/llantaauto-r13-1.png" onerror="this.src='img/llantaauto-r13-1.jpg'" alt="Llanta Auto R13" class="img-slide slide-1" style="opacity: 1; z-index: 5;">
+                    <img src="img/llantaauto-r13-1.png" onerror="this.src='img/llantaauto-r13-1.jpg'" class="img-slide slide-1" style="opacity: 1; z-index: 5;">
                 </div>
                 <h3>Llanta de Chapa - Auto R13</h3>
                 <p class="card-price">desde $80.000</p>
                 <p>Alta resistencia y durabilidad estructural estándar para vehículos livianos.</p>
-                <a href="https://wa.me/5491139540009?text=Hola,%20me%20interesa%20la%20Llanta%20de%20Chapa%20para%20Auto%20R13%20(desde%20$80.000)" target="_blank" class="card-btn">Consultar Stock</a>
+                <a href="https://wa.me/5491139540009?text=Hola,%20me%20interesa%20Llanta%20Auto%20R13" target="_blank" class="card-btn">Consultar Stock</a>
             </div>
 
-            <!-- Auto R14 (2 fotos) -->
             <div class="card rim-card">
                 <div class="card-tag">Auto</div>
                 <div class="image-slider slider-2">
-                    <img src="img/llantaauto-r14-1.png" onerror="this.src='img/llantaauto-r14-1.jpg'" alt="Llanta Auto R14 Vista 1" class="img-slide slide-1">
-                    <img src="img/llantaauto-r14-2.png" onerror="this.src='img/llantaauto-r14-2.jpg'" alt="Llanta Auto R14 Vista 2" class="img-slide slide-2">
+                    <img src="img/llantaauto-r14-1.png" onerror="this.src='img/llantaauto-r14-1.jpg'" class="img-slide slide-1">
+                    <img src="img/llantaauto-r14-2.png" onerror="this.src='img/llantaauto-r14-2.jpg'" class="img-slide slide-2">
                 </div>
                 <h3>Llanta de Chapa - Auto R14</h3>
                 <p class="card-price">desde $90.000</p>
                 <p>Construcción robusta adaptada para soportar el uso diario urbano y de ruta.</p>
-                <a href="https://wa.me/5491139540009?text=Hola,%20me%20interesa%20la%20Llanta%20de%20Chapa%20para%20Auto%20R14%20(desde%20$90.000)" target="_blank" class="card-btn">Consultar Stock</a>
+                <a href="https://wa.me/5491139540009?text=Hola,%20me%20interesa%20Llanta%20Auto%20R14" target="_blank" class="card-btn">Consultar Stock</a>
             </div>
 
-            <!-- Auto R15 (2 fotos) -->
             <div class="card rim-card">
                 <div class="card-tag">Auto</div>
                 <div class="image-slider slider-2">
-                    <img src="img/llantaauto-r15-1.png" onerror="this.src='img/llantaauto-r15-1.jpg'" alt="Llanta Auto R15 Vista 1" class="img-slide slide-1">
-                    <img src="img/llantaauto-r15-2.png" onerror="this.src='img/llantaauto-r15-2.jpg'" alt="Llanta Auto R15 Vista 2" class="img-slide slide-2">
+                    <img src="img/llantaauto-r15-1.png" onerror="this.src='img/llantaauto-r15-1.jpg'" class="img-slide slide-1">
+                    <img src="img/llantaauto-r15-2.png" onerror="this.src='img/llantaauto-r15-2.jpg'" class="img-slide slide-2">
                 </div>
                 <h3>Llanta de Chapa - Auto R15</h3>
                 <p class="card-price">desde $110.000</p>
                 <p>Máxima rigidez y calidad garantizada para vehículos de mayor porte.</p>
-                <a href="https://wa.me/5491139540009?text=Hola,%20me%20interesa%20la%20Llanta%20de%20Chapa%20para%20Auto%20R15%20(desde%20$110.000)" target="_blank" class="card-btn">Consultar Stock</a>
+                <a href="https://wa.me/5491139540009?text=Hola,%20me%20interesa%20Llanta%20Auto%20R15" target="_blank" class="card-btn">Consultar Stock</a>
             </div>
 
-            <!-- Camioneta R15 (1 foto) -->
             <div class="card rim-card">
                 <div class="card-tag">Camioneta</div>
                 <div class="image-slider">
-                    <img src="img/llantacamioneta-r15-1.png" onerror="this.src='img/llantacamioneta-r15-1.jpg'" alt="Llanta Camioneta R15" class="img-slide slide-1" style="opacity: 1; z-index: 5;">
+                    <img src="img/llantacamioneta-r15-1.png" onerror="this.src='img/llantacamioneta-r15-1.jpg'" class="img-slide slide-1" style="opacity: 1; z-index: 5;">
                 </div>
                 <h3>Llanta de Chapa - Camioneta R15</h3>
                 <p class="card-price">desde $120.000</p>
                 <p>Diseño reinforced especial para camionetas, utilitarios y vehículos 4x4.</p>
-                <a href="https://wa.me/5491139540009?text=Hola,%20me%20interesa%20la%20Llanta%20de%20Chapa%20para%20Camioneta%20R15%20(desde%20$120.000)" target="_blank" class="card-btn">Consultar Stock</a>
+                <a href="https://wa.me/5491139540009?text=Hola,%20me%20interesa%20Llanta%20Camioneta%20R15" target="_blank" class="card-btn">Consultar Stock</a>
             </div>
 
-            <!-- Camioneta R16 (1 foto) -->
             <div class="card rim-card">
                 <div class="card-tag">Camioneta</div>
                 <div class="image-slider">
-                    <img src="img/llantacamioneta-r16-1.png" onerror="this.src='img/llantacamioneta-r16-1.jpg'" alt="Llanta Camioneta R16" class="img-slide slide-1" style="opacity: 1; z-index: 5;">
+                    <img src="img/llantacamioneta-r16-1.png" onerror="this.src='img/llantacamioneta-r16-1.jpg'" class="img-slide slide-1" style="opacity: 1; z-index: 5;">
                 </div>
                 <h3>Llanta de Chapa - Camioneta R16</h3>
                 <p class="card-price">desde $150.000</p>
                 <p>Estructura de alta carga preparada para trabajo pesado y exigencia extrema.</p>
-                <a href="https://wa.me/5491139540009?text=Hola,%20me%20interesa%20la%20Llanta%20de%20Chapa%20para%20Camioneta%20R16%20(desde%20$150.000)" target="_blank" class="card-btn">Consultar Stock</a>
+                <a href="https://wa.me/5491139540009?text=Hola,%20me%20interesa%20Llanta%20Camioneta%20R16" target="_blank" class="card-btn">Consultar Stock</a>
             </div>
         </div>
     </section>
