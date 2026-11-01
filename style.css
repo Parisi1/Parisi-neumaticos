@@ -49,7 +49,7 @@ body {
 }
 
 /* =========================================================
-   NAVBAR & LOGO PARISI
+   NAVBAR & LOGO GRANDE PARISI
    ========================================================= */
 .navbar {
     display: flex;
@@ -134,7 +134,7 @@ body {
 }
 
 /* =========================================================
-   HERO SECTION
+   HERO SECTION CON PORTADA .PNG CORREGIDA
    ========================================================= */
 .hero-with-bg {
     position: relative;
@@ -142,7 +142,7 @@ body {
     display: flex;
     align-items: center;
     padding: 4rem 5%;
-    background-image: url('img/portada.jpg');
+    background-image: url('img/portada.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -270,6 +270,33 @@ body {
 .feature-item p {
     color: var(--text-gray);
     font-size: 0.85rem;
+}
+
+/* =========================================================
+   NEUMÁTICO DE LA SEMANA (OFERTAS)
+   ========================================================= */
+.weekly-deal-section {
+    padding: 2rem 5% 4rem 5%;
+}
+
+.weekly-deal-tag {
+    background: linear-gradient(45deg, var(--accent), #0077ff);
+    color: #000;
+}
+
+.old-price {
+    color: var(--text-gray);
+    text-decoration: line-through;
+    font-size: 0.95rem;
+    font-weight: 600;
+}
+
+.current-price {
+    color: var(--accent);
+    font-size: 1.6rem;
+    font-weight: 900;
+    text-shadow: 0 0 10px var(--accent-glow);
+    margin-bottom: 0.8rem;
 }
 
 /* =========================================================
@@ -575,6 +602,7 @@ footer {
     font-size: 0.95rem;
     outline: none;
     box-shadow: 0 0 15px rgba(0,0,0,0.5);
+    cursor: pointer;
     transition: all 0.3s ease;
 }
 
@@ -637,7 +665,7 @@ footer {
     box-shadow: 0 0 20px var(--primary-glow);
 }
 
-/* Lógica de filtrado de tarjetas por CSS puro */
+/* Filtrado de tarjetas por CSS puro */
 #tab-r13:checked ~ .catalog-grid .card:not([data-category="r13"]),
 #tab-r14:checked ~ .catalog-grid .card:not([data-category="r14"]),
 #tab-r15:checked ~ .catalog-grid .card:not([data-category="r15"]),
@@ -646,7 +674,7 @@ footer {
     display: none;
 }
 
-/* En pestaña "Todos", ocultamos las tarjetas que NO tienen data-featured="true" */
+/* En pestaña "Destacados" (Todos), mostramos solo los 8 iniciales */
 #tab-todos:checked ~ .catalog-grid .card:not([data-featured="true"]) {
     display: none;
 }
@@ -662,7 +690,7 @@ footer {
     }
 
     .nav-links {
-        gap: 1.0rem;
+        gap: 1rem;
         font-size: 0.85rem;
         flex-wrap: wrap;
         justify-content: center;
@@ -693,15 +721,4 @@ footer {
     .grid {
         grid-template-columns: 1fr;
     }
-}.hero-with-bg {
-    position: relative;
-    min-height: 80vh;
-    display: flex;
-    align-items: center;
-    padding: 4rem 5%;
-    background-image: url('img/portada.png'); /* Cambia a .jpg, .png o .webp según corresponda */
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    border-bottom: 2px solid rgba(255, 69, 0, 0.3);
 }
