@@ -49,7 +49,7 @@ body {
 }
 
 /* =========================================================
-   NAVBAR & LOGO GRANDE PARISI
+   NAVBAR & LOGO PARISI
    ========================================================= */
 .navbar {
     display: flex;
@@ -134,7 +134,7 @@ body {
 }
 
 /* =========================================================
-   HERO SECTION CON FONDO PANORÁMICO REAL (PORTADA)
+   HERO SECTION
    ========================================================= */
 .hero-with-bg {
     position: relative;
@@ -142,8 +142,7 @@ body {
     display: flex;
     align-items: center;
     padding: 4rem 5%;
-    /* Compatibilidad con JPG y PNG */
-    background-image: url('img/portada.jpg'), url('img/portada.png');
+    background-image: url('img/portada.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -379,7 +378,7 @@ body {
 }
 
 /* =========================================================
-   SLIDER DE IMÁGENES CORREGIDO
+   ESTILOS PARA SLIDER DE IMÁGENES
    ========================================================= */
 .image-slider {
     position: relative;
@@ -404,14 +403,16 @@ body {
     opacity: 0;
 }
 
-/* Estado inicial de visibilidad */
-.slide-1, .s-1 { opacity: 1; z-index: 5; }
-.slide-2, .s-2 { z-index: 4; }
-.slide-3, .s-3 { z-index: 3; }
-.s-4 { z-index: 2; }
-.s-5 { z-index: 1; }
+.slide-1 { opacity: 1; z-index: 5; }
+.slide-2 { z-index: 4; }
+.slide-3 { z-index: 3; }
 
-/* Animación en Hover */
+.card:hover .image-slider {
+    border-color: var(--accent);
+    box-shadow: 0 0 20px var(--accent-glow);
+}
+
+/* Animaciones de slider en Hover */
 .slider-2:hover .slide-1 { animation: c2-1 3s infinite; }
 .slider-2:hover .slide-2 { animation: c2-2 3s infinite; }
 
@@ -419,24 +420,12 @@ body {
 .slider-3:hover .slide-2 { animation: c3-2 4.5s infinite; }
 .slider-3:hover .slide-3 { animation: c3-3 4.5s infinite; }
 
-.slider-5:hover .s-1 { animation: c5-1 7.5s infinite; }
-.slider-5:hover .s-2 { animation: c5-2 7.5s infinite; }
-.slider-5:hover .s-3 { animation: c5-3 7.5s infinite; }
-.slider-5:hover .s-4 { animation: c5-4 7.5s infinite; }
-.slider-5:hover .s-5 { animation: c5-5 7.5s infinite; }
-
 @keyframes c2-1 { 0%, 45% { opacity: 1; } 50%, 95% { opacity: 0; } 100% { opacity: 1; } }
 @keyframes c2-2 { 0%, 45% { opacity: 0; } 50%, 95% { opacity: 1; } 100% { opacity: 0; } }
 
 @keyframes c3-1 { 0%, 30% { opacity: 1; } 33%, 97% { opacity: 0; } 100% { opacity: 1; } }
 @keyframes c3-2 { 0%, 30% { opacity: 0; } 33%, 63% { opacity: 1; } 66%, 100% { opacity: 0; } }
 @keyframes c3-3 { 0%, 63% { opacity: 0; } 66%, 96% { opacity: 1; } 100% { opacity: 0; } }
-
-@keyframes c5-1 { 0%, 18% { opacity: 1; } 20%, 98% { opacity: 0; } 100% { opacity: 1; } }
-@keyframes c5-2 { 0%, 18% { opacity: 0; } 20%, 38% { opacity: 1; } 40%, 100% { opacity: 0; } }
-@keyframes c5-3 { 0%, 38% { opacity: 0; } 40%, 58% { opacity: 1; } 60%, 100% { opacity: 0; } }
-@keyframes c5-4 { 0%, 58% { opacity: 0; } 60%, 78% { opacity: 1; } 80%, 100% { opacity: 0; } }
-@keyframes c5-5 { 0%, 78% { opacity: 0; } 80%, 98% { opacity: 1; } 100% { opacity: 0; } }
 
 /* =========================================================
    SERVICIOS Y FOOTER
@@ -562,6 +551,107 @@ footer {
 }
 
 /* =========================================================
+   BUSCADOR Y PESTAÑAS DE RODADOS (CSS PURO)
+   ========================================================= */
+.search-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2rem;
+}
+
+.search-box {
+    position: relative;
+    width: 100%;
+    max-width: 500px;
+}
+
+.search-input {
+    width: 100%;
+    padding: 0.9rem 1rem 0.9rem 3rem;
+    background: var(--bg-card);
+    border: 2px solid rgba(255, 69, 0, 0.3);
+    border-radius: 30px;
+    color: #fff;
+    font-size: 0.95rem;
+    outline: none;
+    box-shadow: 0 0 15px rgba(0,0,0,0.5);
+    transition: all 0.3s ease;
+}
+
+.search-input:hover {
+    border-color: var(--primary);
+    box-shadow: 0 0 20px var(--primary-glow);
+}
+
+.search-icon {
+    position: absolute;
+    top: 50%;
+    left: 15px;
+    transform: translateY(-50%);
+    font-size: 1.1rem;
+}
+
+/* Ocultar radios de pestañas */
+.tab-radio {
+    display: none;
+}
+
+/* Botones de pestañas */
+.catalog-tabs {
+    display: flex;
+    justify-content: center;
+    gap: 0.8rem;
+    flex-wrap: wrap;
+    margin-bottom: 3rem;
+}
+
+.tab-btn {
+    background: var(--bg-card);
+    color: var(--text-gray);
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    padding: 0.7rem 1.5rem;
+    border-radius: 25px;
+    font-weight: 700;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+}
+
+.tab-btn:hover {
+    border-color: var(--primary);
+    color: #fff;
+    transform: translateY(-2px);
+}
+
+/* Estilo activo de los botones de pestañas */
+#tab-todos:checked ~ .catalog-tabs label[for="tab-todos"],
+#tab-r13:checked ~ .catalog-tabs label[for="tab-r13"],
+#tab-r14:checked ~ .catalog-tabs label[for="tab-r14"],
+#tab-r15:checked ~ .catalog-tabs label[for="tab-r15"],
+#tab-r16:checked ~ .catalog-tabs label[for="tab-r16"],
+#tab-r17:checked ~ .catalog-tabs label[for="tab-r17"] {
+    background: linear-gradient(45deg, var(--primary), #ff6a00);
+    color: #fff;
+    border-color: var(--primary);
+    box-shadow: 0 0 20px var(--primary-glow);
+}
+
+/* Lógica de filtrado de tarjetas por CSS puro */
+#tab-r13:checked ~ .catalog-grid .card:not([data-category="r13"]),
+#tab-r14:checked ~ .catalog-grid .card:not([data-category="r14"]),
+#tab-r15:checked ~ .catalog-grid .card:not([data-category="r15"]),
+#tab-r16:checked ~ .catalog-grid .card:not([data-category="r16"]),
+#tab-r17:checked ~ .catalog-grid .card:not([data-category="r17"]) {
+    display: none;
+}
+
+/* En pestaña "Todos", ocultamos las tarjetas que NO tienen data-featured="true" */
+#tab-todos:checked ~ .catalog-grid .card:not([data-featured="true"]) {
+    display: none;
+}
+
+/* =========================================================
    ADAPTABILIDAD PARA CELULARES
    ========================================================= */
 @media (max-width: 768px) {
@@ -572,7 +662,7 @@ footer {
     }
 
     .nav-links {
-        gap: 1rem;
+        gap: 1.0rem;
         font-size: 0.85rem;
         flex-wrap: wrap;
         justify-content: center;
@@ -603,4 +693,15 @@ footer {
     .grid {
         grid-template-columns: 1fr;
     }
+}.hero-with-bg {
+    position: relative;
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    padding: 4rem 5%;
+    background-image: url('img/portada.png'); /* Cambia a .jpg, .png o .webp según corresponda */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-bottom: 2px solid rgba(255, 69, 0, 0.3);
 }
